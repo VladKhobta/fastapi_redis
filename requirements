@@ -2,3 +2,4 @@ fastapi
 uvicorn
 psutil
 gputil
+aioredis==1.3.1

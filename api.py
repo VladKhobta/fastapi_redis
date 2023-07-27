@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from schemas import LoadOut
-from main import get_redis_session
+from db import get_redis_session
 
 router = APIRouter()
 
@@ -8,7 +8,9 @@ router = APIRouter()
 @router.get("/load")
 async def get_load():
     return LoadOut(
-
+        cpu_load=1.1,
+        ram_load=2.1,
+        gpu_load=3.1
     )
 
 

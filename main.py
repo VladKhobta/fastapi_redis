@@ -2,12 +2,8 @@ from fastapi import FastAPI, Request
 import aioredis
 from datetime import datetime
 
-from aioredis import Redis
+from db import get_redis_session
 from api import router
-
-
-async def get_redis_session() -> Redis:
-    return await aioredis.create_redis_pool("redis://localhost")
 
 
 app = FastAPI()
